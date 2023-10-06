@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+:root{
+    --fonte-titulo: Cambria;
+    --fonte-tabela: 'Inter', sans-serif;
+    --amarelo: #FAC900;
+    --roxo:#C75EEB;
+    --verde:#61E061;
+    --azul:#4EBFE9;
+    --vermelho: #F6543B;
+    --cinza-claro:#fafafa;
+}
+
+/*Titulo e botão de adicionar*/
+.div-titulo{
+    display: flex;
+    justify-content: space-between;
+    margin:40px;
+}
+
+.titulo{
+    font-size: 2rem;
+    font-family: Cambria;
+    color: var(--vermelho);
+}
+
+/*Estilos dos botões*/
+.botao{
+    padding: 0.8em 1.7em;
+    background-color: #f2f2f2;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.botao::before, .botao::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 1s ease;
+} 
+
+/*Cores de cada botão*/
+.botao.adicionar{
+    color: black;
+    background: #61e0619d;
+}
+
+.botao.adicionar::before, .botao.adicionar::after {
+    background-color: var(--verde);
+} 
+
+.botao.exibir::before, .botao.exibir::after {
+    background-color: var(--roxo);
+}
+
+.botao.filtrar::before, .botao.filtrar::after{
+    background-color: var(--azul);
+}
+
+.botao.ordenar::before, .botao.ordenar::after{
+    background-color: var(--vermelho);
+}
+
+.botao::before {
+    top: -1em;
+    left: -1em;
+}
+
+.botao::after{
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.botao:hover::before, .botao:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.botao:hover {
+    color: rgb(255, 255, 255);
+}
+   
+.botao:active {
+    filter: brightness(.8);
+}   
+
+main{
+    margin: 70px;
+}
+
+/* Tabela completa */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 30px;
+}
+
+
+
+th {
+    background-color: #f2f2f2;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+   
+    color: rgb(131, 131, 170);
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    
+}
+
+/* Campos de entrada (inputs) */
+
+.secao-nova-tarefa{
+    align-items: center;
+    margin: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #e8e8e8;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.titulo-form {
+    font-size: 28px;
+    font-family: var(--fonte-titulo);
+    color: var(--roxo);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.titulo-form::before,.titulo-form::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--verde);
+}
+  
+.titulo-form::before {
+    width: 18px;
+    height: 18px;
+    background-color: var(--verde);
+}
+  
+.titulo-form::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+  
+
+
+  

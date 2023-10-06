@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner 2023</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container div-titulo">
+            <h1 class="titulo">Meu planner de estudos</h1>
+            <button class="botao exibir" id="exibirValores">Mostrar atividades</button>
+            <button class="botao filtrar" id="">Filtrar por disciplina</button>
+            <button class="botao ordenar" id="">Ordenar por prioridade</button> 
+            </div>
+    </header>
+
+    <main>
+        <section class="container secao-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Tarefa</th>
+						<th>Prazo</th>
+						<th>Feito</th>
+						<th>Progresso</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela-licoes">
+                    <tr class="licao">
+                        <td class="info-disciplina">Matemática</td>
+                        <td class="info-tarefa">Página 33 exercício 3</td>
+                        <td class="info-prazo">22/09/2023</td>
+                        <td class="info-feito">
+                            <input type="checkbox" name="feito" id="feito">
+                        </td>
+                        <td class="info-progresso">A definir</td>
+                    </tr>
+
+                    <tr class="licao">
+                        <td class="info-disciplina">Portugues</td>
+                        <td class="info-tarefa">Página 50 exercício 300</td>
+                        <td class="info-prazo">28/10/2023</td>
+                        <td class="info-feito">
+                            <input type="checkbox" name="feito" id="feito">
+                        </td>
+                        <td class="info-progresso">A definir</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+
+    <section class="container secao-nova-tarefa">
+        
+        <form id="form-adiciona">
+            <h2 class="titulo-form" id="titulo-form">Adicionar nova tarefa</h2>
+            
+            <div class="grupo">
+                <label for="disciplina">Disciplina:</label>
+                <input type="text" name="disciplina" id="disciplina" list="lista">
+                    <datalist id="lista">
+                        <option value="portugues">Português</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="ciencias">Ciências</option>
+                    </datalist>
+            </div>
+            <div class="grupo">
+                <label for="tarefa">Tarefa:</label>
+                <input id="tarefa" name="tarefa" type="text" placeholder="digite sua tarefa" class="campo campo-medio">
+            </div>
+            <div class="grupo">
+                <label for="prazo">Prazo:</label>
+                <input id="prazo" name="prazo" type="date" class="campo campo-medio">
+            </div>
+
+            <button id="adicionar-licao" class="botao adicionar">Adicionar</button>
+        </form>
+    </section>
+
+
+    <script src="js/principal.js"></script>
+    <script src="js/adicionar.js"></script>
+</body>
+</html>
